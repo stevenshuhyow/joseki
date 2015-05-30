@@ -56,6 +56,10 @@ AppDispatcher.register(function(payload) {
       AppStore.emitEvent('loggedIn');
       break;
 
+    //sets current user properties to be undefined
+    //removes the local item joseki
+    //and clears the url so that we no longer reference the information
+    //to sign in
     case AppConstants.REMOVE_CURRENT_USER:
       _currentUser.id = undefined;
       _currentUser.name = undefined;
