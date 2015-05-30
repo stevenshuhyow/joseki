@@ -64,12 +64,16 @@ var App = React.createClass({
       var id = this.getParameterByName('id');
       var token = this.getParameterByName("token");
 
+
+
       var data = {
         username: username,
         id: id,
         token: token
       };
     AppActions.setCurrentUser(data);
+    } else {
+
     }
   },
 
